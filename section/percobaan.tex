@@ -1,0 +1,93 @@
+\section{Alat dan Bahan}
+
+Alat dan bahan yang digunakan dalam penentuan massa kritis reaktor ini meliputi\cite{ZUBAIR2024110538}:
+
+\begin{itemize}
+    \item \textit{Handling Tool}: Digunakan untuk operasi \textit{loading} (pemasukan) dan \textit{unloading} (pengeluaran) elemen bahan bakar ke dan dari teras reaktor. 
+    \item Detektor Neutron (\textit{Fission Chamber}, FC): Detektor proporsional yang sensitif terhadap fluks neutron termal, digunakan sebagai pencacah (sensor) populasi neutron di dalam teras.
+    \item Sistem Pencacah (\textit{Counter}/Scaler): Perangkat elektronik yang terhubung ke detektor FC untuk menampilkan dan merekam laju cacah neutron.
+    \item Elemen Bahan Bakar: Elemen bahan bakar uranium dengan pengayaan rendah yang akan dimasukkan secara bertahap.
+    \item Sumber Neutron: Sumber neutron independen (misalnya Amerisium-Berilium / Am-Be) yang dimasukkan ke teras untuk menghasilkan fluks neutron awal (\(S\)) saat reaktor dalam kondisi subkritis.
+    \item Perangkat Lunak Analisis: Program lembar kerja (seperti \textit{Microsoft Excel}) untuk memproses data laju cacah (\(C\)) dan menghitung faktor resiprokal \(1/C\) serta menentukan massa kritis.
+\end{itemize}
+Spesifikasi bahan bakar reaktor Kartini.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{3cm}|p{3cm}|}\hline
+        Parameters & Specification \\ \hline
+        Length of Fuel Element & 75 cm\\ \hline
+        Outer Diameter & 3.81 cm\\ \hline
+        Length of Graphite & 9.4 (Bottom); 6.6 (Top) cm\\ \hline
+        Length of UZrH & 38.1 cm\\ \hline
+        Diameter of UZrH & 3.56 cm\\ \hline
+        Mass of UZrH & 2.235 gr\\ \hline
+        Density of UZrH & 5.99 gr/Cm3\\ \hline
+        Uranium contents & 8.5\% \\ \hline
+        U235 Enrichments & 19.75\% \\ \hline
+        Mass of U235 & \(\pm\)38 gr \\ \hline
+    \end{tabular}
+    \caption{Spesifikasi dari bahan bakar reaktor Kartini.\label{table:1}}
+\end{table}
+\section{Prosedur Percobaan}
+Prosedur eksperimen ini bertujuan mengukur multiplikasi subkritis reaktor untuk memperkirakan massa kritis\cite{Glasstone1994}.
+
+\subsection{Persiapan Kondisi Awal (\textit{Initial Unloading})}
+Pada kondisi operasi kritis Reaktor Kartini pada daya 100 kW, jumlah elemen bahan bakar adalah 71 kelongsong dengan massa total \(^{235}\text{U}\) sekitar \(\pm 2645\,\text{gram}\). 
+Agar reaktor berada dalam kondisi subkritis total (\textit{zero power}) sebelum pengujian dimulai, dilakukan \textit{unloading} (pengeluaran) elemen bahan bakar sebanyak 8 kelongsong. 
+Dengan demikian, jumlah total elemen bahan bakar pada kondisi awal praktikum (\textit{initial condition}) adalah 63 kelongsong. 
+Kondisi ini memastikan bahwa faktor multiplikasi efektif (\(K_{\text{eff}}\)) jauh di bawah 1, sehingga regenerasi neutron tidak dapat berlangsung tanpa adanya sumber neutron eksternal.
+
+\subsection{Pemasukan (\textit{Loading}) Bahan Bakar ke dalam Teras Reaktor}
+
+Tujuan utama dari prosedur pemasukan (\textit{loading}) bahan bakar ke dalam teras reaktor adalah untuk menentukan jumlah massa minimum \(^{235}\text{U}\) yang dibutuhkan agar reaktor mencapai kondisi kritis (\(K_{\text{eff}} = 1\))\cite{Glasstone1994}.
+Pada kondisi awal, reaktor sudah berisi sejumlah bahan bakar sisa (\textit{initial condition} sebanyak 63 kelongsong, sekitar \(2377\,\text{gram}\) \(^{235}\text{U}\)) dan telah dipasang sumber neutron awal (Am-Be). 
+Meskipun demikian, kondisi ini masih subkritis (\(K_{\text{eff}} < 1\)), yang berarti populasi neutron yang ada di dalam teras (termasuk cacah latar belakang) bergantung pada sumber eksternal.
+Untuk menentukan (memperkirakan) massa kritis, elemen bahan bakar dimasukkan secara bertahap.
+\subsubsection{Pelaksanaan \textit{loading} bahan bakar}
+Personil minimal terdiri dari 9 orang:
+\begin{enumerate}
+    \item Supervisor Reaktor: 1 orang
+    \item Operator Reaktor: 2 orang
+    \item Operator \textit{Handling Tool}: 1 orang
+    \item Operator \textit{Unloading}: 3 orang
+    \item Petugas Akuntansi Bahan Nuklir: 1 orang
+    \item Petugas Proteksi Radiasi: 1 orang
+\end{enumerate}
+\par Personil melakukan kegiatan \textit{loading} sesuai prosedur berikut:
+\begin{enumerate}
+    \item Sebelum percobaan dimulai, yakinlah bahwa telah dilakukan \textit{unloading} (8 buah) bahan bakar, dan catat berat massa bahan bakar yang masih ada dalam teras.
+    \item Menaikkan semua batang kendali baik pengaman, kompensasi, dan pengatur berada pada posisi \textit{fully-up}, kemudian lakukan pencacahan neutron (\(C_1\)).
+    \item Melakukan \textit{loading} satu buah bahan bakar dan catat berat massa \(^{235}\text{U}\) dalam teras reaktor setelah penambahan, kemudian lakukan pencacahan neutron (\(C_2\)).
+          Untuk memperhitungkan (prediksi) massa kritis, tentukan titik potong sumbu ordinat dengan menarik garis dari (\(C_1\) sampai dengan \(C_2\)). Dengan menggunakan \textit{Excel}, hitung prediksi massa kritisnya.\label{cara:3}
+    \item Dengan cara yang sama dengan langkah (\ref{cara:3}), lakukan \textit{loading} kembali untuk bahan bakar berikutnya dan lakukan pencacahan neutron berikutnya (\(C_3\)). Kemudian lakukan kembali \text{loading} bahan bakar dan pencacahan (ke-n dengan cacah \(C_n\)) hingga mencapai kritis.
+    \item Tentukan massa kritis reaktor dengan membuat grafik \(1/C\) versus massa bahan bakar fissil (\(^{235}\text{U}\)) untuk reaktor Kartini. Kemudian tentukan jari-jari kritis reaktor \(R_c\) dari persamaan (\ref{eq:9}). Bentuk grafik yang diperoleh dalam menuju kondisi kritis bisa bervariasi
+          (lurus, cembung atau cekung) seperti ditunjukkan pada gambar (\ref{g:1}).
+    \item Kondisi kritis ditandai dengan pernunjukan daya reaktor pada kondisi konstan (\textit{zero power}), atau bahkan terjadi kenaikan daya reaktor secara perlahan dan kontinu.
+    \item Apabila indikasi kekritisan telah diperoleh, semua batang kendali diturunkan, kemudian dilanjutkan \textit{loading} bahan bakar yang masih tersisa (apabila masih tersedia).
+    \item Setiap penambahan bahan bakar, salah satu batang kendali diturunkan sampai \(0\%\) untuk aspek keamanan.
+\end{enumerate}
+\subsection{Analisis Hasil Eksperimen}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.5\textwidth]{image/image1.png}
+    \caption{Contoh grafik antara \(\frac{1}{C}\) vs M (massa kritis \(^{235}\text{U}\)).\label{g:1}}
+\end{figure}
+Data hasil eksperimen diplot dalam grafik dimana nilai \(\frac{1}{C}\) adalah absis dan massa \(^{235}\text{U}\) sebagai ordinatnya sebagaimana ditampilkan pada gambar (\ref{g:1}).
+Dilakukan ekstrapolasi dengan menarik garis ke arah sumbu-x antara dua data berurutan, misal data 1 sampai 2, 2 sampai 3, 3 sampai 4, dan seterusnya. Dengan memperbanyak data akan membuat data semakin konvergen.
+Dalam hal ini massa kritis reaktor adalah ketika konvergen saat \(y = 0\).
+\par Grafik berbentuk linier adalah yang paling ideal karena ekstrapolasi pada penambahan bahan bakar pada tahap 1 telah dapat memberikan estimasi massa kritis reaktor dengan baik.
+Estimasi tahap 1 yang diperoleh kurva cekung memberikan jumlah massa krits yang terlalu kecil, sedang kurva cembung memberikan estimasi yang terlalu besar.
+Bentuk kurva yang terlalu cekung umumnya diperoleh bila posisi detektor terlalu jauh dengan sumber neutron, sedang kurva yang telalu cembung umumnya diperoleh apabila posisi detektor terlalu dekat.
+Dengan memperbanyak jumlah tahap penambahan bahan bakar, estimasi massa kritis yang diperoleh semakin baik.
+\par Pendekatan lain adalah dengan menggunakan \textit{Microsoft Excel}. Dengan cara\label{cara:analisis}:
+\begin{enumerate}
+    \item Data hasil eksperimen diplot dalam grafik dimana nilai \(\frac{1}{C}\) adalah absis dan massa \(^{235}\text{U}\) sebagai ordinat.
+    \item Tambahkan persamaan grafik dalam bentuk \(y = mx+c\).
+    \item Karena massa kritis adalah saat \(y = 0\), maka persamaan \(y(0) = mx+c\) dapat diselesaikan deengan \(x=\frac{c}{m}\) dimana nilai x adalah massa kritis \(M_c\).
+\end{enumerate}
+Jari-jari kritis dapat ditentukan dengan menggunakan nilai massa kritis yang telah diperoleh (\(M_c\)), tinggi aktif bahan bakar (\(H_a\)), dan densitas bahan bakar \(^{235}\text{U}\) (\(\rho\)) menggunakan persamaan (\ref{eq:9}) sebelumnya, didapat
+persamaan sebagai berikut.
+\begin{align}\label{eq:10}
+    R_c^2 = \frac{M_c}{\pi H_a \rho}
+\end{align}
+Penentuan jari-jari kritis reaktor massa kritis harus konsisten dengan densitas yang digunakan.

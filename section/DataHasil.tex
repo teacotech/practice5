@@ -1,0 +1,45 @@
+\section{Data Hasil Percobaan}\label{sec:datapercobaan}
+Adapun untuk tampilan \textit{benchmarck core} dari TRIGA sebagai berikut.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.4\textwidth]{image/image-fuelpin.png}
+    \caption{Bahan bakar yang ditambahkan pada praktikum ini berwarna kuning.\label{data:1}}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.5\textwidth]{image/image-exp1.png}
+    \caption{Data Praktikum: ID material, massa, total massa, pencacahan, rerata pencacahan per detik, \(\frac{1}{C}\), dan keterangan kekritisan.\label{data:2}}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.5\textwidth]{image/image-exp2-hasil.png}
+    \caption{\(\frac{1}{C}\) versus Penambahan massa bahan bakar.\label{data:3}}
+\end{figure}
+
+\section{Pembahasan}
+Dari data hasil percobaan(\ref{sec:datapercobaan}) di atas, didapatkan persamaan \(y = -0.0012x+3.1263\). Dari persamaan ini, dengan menggunakan cara yang sama pada bagian(\ref{cara:analisis}),
+maka akan didadpatkan massa kritis \(M_c\) sebesar \(M_c = \frac{3.1263}{0.0012} = 2605.25\,\text{gram}\).
+\par Kemudian untuk mendapatkan jari-jari kritis, digunakan persamaan(\ref{eq:10}), sehingga didapatkan:
+\begin{align*}
+    R_c = \sqrt{\left(\frac{M_c}{\pi H_a \rho}\right)} = \sqrt{\left(\frac{2605,25}{\pi (38.1)(5.99)}\right)}=1.906\,\text{cm}
+\end{align*}
+Dari sini, \(R_c\) dan \(M_c\) perhitungan menggunakan persamaan di atas, adalah \textit{Bulk Geometric Property}, dengan catatan nilai dari 
+nilai \(R_c\) yang dihitung hitung adalah Radius Kritis teoretis untuk model homogen yang disederhanakan, yang memiliki sifat neutronik (kekritisan) yang sama dengan inti heterogen yang sebenarnya. 
+Nilai ini membantu memvalidasi nilai \(M_c\) eksperimental terhadap model fisika reaktor dasar, yang sering kali memperlakukan material inti sebagai campuran homogen tunggal.
+Jika penambahan massa total untuk sampai kritis pada tabel(\ref{data:1}), massa total sebesar \(255.4646\,\text{gram}\), dalam hal ini, teras reaktor perlu
+diisi bahan bakar sampai mencapai massa kritis, sebesar katakanlah \(\Delta M = 2605.25-255.4646 = 45.7854\,\text{gram}\). 
+Dengan melihat tabel spesifikasi(\ref{table:1}), rerata massa dari bahan bakar \(^{235}\text{U}\) sebesar 38 gram, sehingga dibutuhkan paling tidak penambahan dua kali bahan bakar, sehingga 
+menjadi 71 buah bahan bakar dari hasil praktikum kali ini. Namun, jika melihat pada tabel, tanpa ekstrapolasi, kita dapat melihat pada(\ref{data:2}) bahwa \(\frac{1}{C} \approx 0\) ketika bahan bakar
+total sebanyak 69.
+\par Dari data yang disajikan pada \textit{PROSIDING SEMINAR PENELITIAN DAN PENGELOLAAN PERANGKAT NUKLIR--BATAN}, dapat dilihat untuk operasi reaktor daya 100 kW untuk 360 jam/tahun, atau 2 kali lipatnya, keterangan
+kritis dari reaktor Kartini tercapai dengan kisaran jumlah bahan bakar ketika menyentuh angka 69, 70, dan 71 buah\cite{Mudjilan2013Analisis}.
+
+\section{Kesimpulan}
+Pada praktikum kali ini, telah didapat data untuk massa kritis reaktor kartini, pada \textit{Practice-5 Kekritisan Reaktor} tanggal 28 November 2025, sebesar
+\(M_{c-extra}= 2605.25\,\text{gram}\). Namun, dengan melihat tabel(\ref{data:1}), dapat dilihat pada massa total bahan bakar untuk sampai pada keadaan reaktor kritis, sebesar \(M_{c-tabel}=255.4646\,\text{gram}\).
+Dapat dihitung error relatif nilai \(M_c\) sebesar \(err_{rel} = \frac{M_{c-extra}-M_{c-tabel}}{M_{c-extra}} = 2\%\), dapat dituliskan
+\(M_c = 2605.25\pm 0.02\). Kemudian dengan jari-jari kritis untuk mencapai massa kritis reaktor sebesar \(R_c=1.906\,\text{cm}\), dengan keterangan
+bahwa nilai ini merupakan \textit{Bulk Geometry Property}, dan dikarenakan \(M_c\) merupakan sifat neutronik (\textit{neutronic property}), maka perlu diperhitungkan metode lain seperti penggunaan software \textit{MCNP}, dan software neutronik lain
+untuk mendapatkan nilai teoritis sehingga pembanding error di atas lebih valid.

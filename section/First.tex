@@ -1,0 +1,121 @@
+\section{Tujuan Percobaan}
+\par Pada praktikum kali ini, peserta praktikum dapat menentukan
+jumlah massa kritis dari bahan bakar \(^{235}\text{U}\) yang harus diisikan ke dalam
+teras reaktor agar dapat melangsungkan reaksi pembelahan berantai (\textit{chain reaction})
+dengan selamat.
+
+\section{Dasar Teori}
+\subsection{Kekritisan Reaktor}
+\par Pada saat reaktor dioperasikan, terjadi proses reaksi inti bahan bakar \(^{235}\text{U}\) dengan neutron termal yang menghasilkan reaksi pembelahan (fisi)
+berantai\cite{Lamarsh2002}. Reaksi fisi \(^{235}\text{U}\) melepaskan neutron baru yang berperan dalam melanjutkan proses ini. Apabila populasi
+neutron di dalam teras reaktor pada kondisi ajeg (\textit{steady state}) maka disebut reaktor
+dalam kondisi kritis. Dalam hal ini dapat dikatakan bahwa pada saat berlangsungnya proses regenerasi,
+jumlah neutron sebelum dan sesudah reaksi fisi \(^{235}\text{U}\) adalah tetap\cite{Glasstone1994}.
+Kondisi ini dapat tercapai hanya jika jumlah minimum bahan bakar fisil, yang dikenal sebagai massa kritis, terpenuhi, sehingga
+memungkinkan regenerasi neutron dapat berlangsung secara kontinu dengan populasi neutron sebelum dan sesudah
+regenerasi adalah sama.
+Massa kritis adalah jumlah minimum bahan bakar \(^{235}\text{U}\) yang memungkinkan regenerasi neutron dapat berlangsung secara kontinu, 
+sehingga populasi neutron sebelum dan sesudah regenerasi adalah sama. 
+\par Didefinisikan bahwa \(K_{eff}\) adalah perbandingan jumlah neutron pada suatu generasi terhadap jumlah neutron pada
+generasi sebelumnya, dituliskan sebagai:
+\begin{align}\label{eq:1}
+  K_{eff} = \frac{\Sigma\,\texttt{neutron pada suatu generasi}}{\Sigma\,\texttt{neutron generasi sebelumnya}}
+\end{align}
+\begin{itemize}
+  \item Bila \(K_{eff} > 1\) maka reaktor disebut dalam kondisi superkritis; dimana populasi neutron di dalam
+        teras reaktor pada suatu generasi terus meningkat sebagai fungsi waktu.
+  \item Bila \(K_{eff} < 1\), disebut reaktor dalam kondisi subkritis; dimana populasi neutron pada suatu regenerasi terus
+        berkurang sebagai fungsi waktu.
+  \item Bila \(K_{eff} = 1\), disebut reaktor dalam kondisi kritis, dimana populasi neutron pada suatu regenerasi dalam keadaan
+        dalam keadaan setimbang (tetap/ajeg). 
+\end{itemize}
+
+\subsection{Faktor yang Memengaruhi Kekritisan Reaktor}
+
+Kekritisan reaktor nuklir dipengaruhi oleh beberapa faktor utama yang menentukan keseimbangan antara produksi neutron fisi dan hilangnya neutron (melalui absorpsi dan kebocoran)\cite{Lamarsh2002}.
+
+\subsubsection{Komposisi Material}
+Komposisi material teras reaktor sangat menentukan kekritisan. Faktor utamanya adalah kandungan bahan fisil (seperti \(^{235}\text{U}\) atau \(^{239}\text{Pu}\)) yang memicu reaksi fisi, 
+dan bahan fertil (seperti \(^{238}\text{U}\) atau \(^{232}\text{Th}\)) yang dapat dikonversi menjadi bahan fisil baru. Selain itu,
+keberadaan material penyerap neutron, seperti boron atau kadmium, dapat menghambat reaksi berantai dengan menghilangkan neutron bebas. 
+Kontrol terhadap material penyerap ini sangat penting untuk menjaga kekritisan yang diinginkan\cite{Glasstone1994}.
+
+\subsubsection{Massa dan Densitas}
+Kekritisan terkait langsung dengan jumlah bahan fisil. 
+Massa bahan fisil harus cukup besar untuk mencapai massa kritis; 
+jika massa terlalu kecil, laju kebocoran neutron akan melebihi laju produksi neutron, 
+menyebabkan sistem menjadi subkritis. Selain itu, densitas bahan fisil memengaruhi jumlah atom fisil per satuan volume. 
+Densitas yang lebih tinggi meningkatkan probabilitas interaksi antara neutron dengan inti fisil, sehingga meningkatkan kekritisan.
+
+\subsubsection{Energi Neutron dan Moderasi}
+Probabilitas terjadinya fisi dipengaruhi oleh energi neutron. 
+Neutron termal (berenergi rendah) memiliki probabilitas yang jauh lebih tinggi untuk memicu fisi pada bahan seperti \(^{235}\text{U}\), 
+sedangkan neutron cepat lebih efektif pada beberapa bahan fisil tertentu, seperti \(^{239}\text{Pu}\). 
+Oleh karena itu, moderasi adalah proses penting untuk memperlambat neutron cepat menjadi neutron termal menggunakan material moderator (seperti air ringan, air berat, atau grafit). 
+Moderator yang efektif meningkatkan peluang neutron ditangkap oleh bahan fisil, secara langsung meningkatkan \(K_{\text{eff}}\)\cite{Lamarsh2002}.
+
+\subsubsection{Geometri dan Reflektor}
+Faktor-faktor ini berkaitan dengan manajemen kebocoran neutron. 
+Bentuk geometris material fisil memengaruhi rasio luas permukaan terhadap volume, 
+yang secara langsung menentukan laju kebocoran neutron; bentuk yang lebih kompak, seperti bola, akan meminimalkan kebocoran. 
+Selain itu, penggunaan reflektor (misalnya, berilium atau grafit) di sekeliling inti reaktor berfungsi memantulkan neutron yang bocor kembali ke dalam inti. 
+Penggunaan reflektor secara signifikan mengurangi kebocoran neutron, sehingga meningkatkan efisiensi reaksi dan membantu mencapai kondisi kritis\cite{Glasstone1994}.
+
+
+\subsection{Penentuan Massa Kritis Reaktor}
+\subsubsection{Metode Pendekatan Multiplikasi Subkritis}
+Penentuan massa kritis reaktor dapat dilakukan melalui metode eksperimental yang mengamati respons populasi neutron 
+terhadap penambahan bahan bakar, yang dikenal sebagai metode multiplikasi subkritis (\textit{subcritical multiplication method})\cite{Lamarsh2002}.
+Apabila sumber neutron awal dengan laju produksi \(S\) neutron dimasukkan ke teras, maka pada akhir generasi pertama akan dihasilkan \(K_{\text{eff}} \cdot S\) neutron, 
+pada akhir generasi kedua sejumlah \(K_{\text{eff}}^2 \cdot S\), dan seterusnya.
+
+Total perlipatan neutron (\textit{multiplication factor}) di dalam teras \((X)\) adalah penjumlahan dari deret geometris yang dihasilkan:
+\begin{align}\label{eq:2}
+ X &= \frac{S + K_{\text{eff}}S + K_{\text{eff}}^2S + \dots}{S} = 1 + K_{\text{eff}} + K_{\text{eff}}^2 + \dots
+\end{align}
+Untuk kondisi subkritis, di mana \(K_{\text{eff}} < 1\), jumlah seluruh neutron yang ada di dalam teras (\(N\)) 
+adalah hasil perkalian antara sumber neutron dan faktor multiplikasi \(X\):
+\begin{align}\label{eq:3}
+     N = S \cdot X = \frac{S}{1 - K_{\text{eff}}}
+\end{align}
+Jika di area medan neutron teras ditempatkan detektor neutron (misalnya, detektor \textit{Fission Chamber}, FC), 
+maka laju cacah yang teramati (\(C\)) adalah sebagian fraksi (\(F\)) dari jumlah neutron total (\(N\)) yang ada di dalam teras:
+\begin{align}\label{eq:4}
+   C = F \cdot N = \frac{F \cdot S}{1 - K_{\text{eff}}}
+\end{align}
+Dalam eksperimen penentuan massa kritis, lebih disukai untuk mengamati nilai resiprokal laju cacah, \(1/C\), untuk setiap penambahan bahan bakar\cite{Glasstone1994}: 
+\begin{align}\label{eq:5}
+\frac{1}{C} = \frac{1 - K_{\text{eff}}}{F \cdot S}
+\end{align}
+Harga \(K_{\text{eff}}\) akan bertambah seiring pertambahan massa bahan bakar \(^{235}\text{U}\) secara bertahap. 
+Bila kondisi kritis telah tercapai (\(K_{\text{eff}}=1\)), maka parameter \(1/C\) dari Persamaan (\ref{eq:5}) akan menjadi nol. 
+Massa kritis reaktor kemudian dapat ditentukan dengan menentukan titik nol (\(1/C=0\)) pada grafik korelasi antara \(1/C\) versus massa bahan bakar yang telah dimasukkan.
+
+\subsubsection{Pendekatan Teori Difusi}
+Penentuan massa kritis juga dapat dilakukan dengan pendekatan teoritis berdasarkan model reaktor. 
+Berdasarkan pendekatan teori difusi satu kelompok untuk reaktor telanjang (\textit{bare reactor}), 
+faktor multiplikasi efektif dirumuskan sebagai berikut\cite{Duderstadt1976}:
+\begin{align}\label{eq:6}
+    K_{\text{eff}} = \frac{K_{\infty}}{1 + M^2B^2}
+\end{align}
+Di mana \(K_{\infty}\) (faktor multiplikasi tak hingga) dan \(M^2\) (luas migrasi) adalah fungsi dari komposisi material dan dapat dianggap konstan. 
+Dengan mensubstitusikan Persamaan (\ref{eq:6}) ke dalam Persamaan (\ref{eq:5}) dan menyederhanakannya, didapatkan:
+\begin{align}\label{eq:7}
+    \frac{1}{C} \propto 1 - K_{\text{eff}} = 1 - \frac{K_{\infty}}{1 + M^2B^2} = \frac{1 - K_{\infty} + M^2B^2}{1 + M^2B^2}
+\end{align}
+Dalam kondisi yang mendekati kritis, dapat diasumsikan bahwa \(1/C\) kira-kira linier terhadap \(B^2\) (\textit{buckling}). 
+Pada kondisi kritis, \(B^2\) sama dengan \textit{buckling} geometris (\(B_g^2\)), yang untuk teras silinder, dirumuskan:
+\begin{align}\label{eq:8}
+    B_g^2 = \left(\frac{2.405}{R_{\text{e}}}\right)^2+\left(\frac{\pi}{H_{\text{e}}}\right)^2
+\end{align}
+Di mana \(R_{\text{e}}\) dan \(H_{\text{e}}\) berturut-turut adalah jari-jari dan tinggi teras terekstrapolasi.
+
+Dengan penambahan bahan bakar secara bertahap, jari-jari teras (\(R\)) akan bertambah, sementara tinggi teras (\(H\)) biasanya tetap. 
+Dengan demikian, dapat dibuat grafik korelasi antara \(1/C\) versus \(1/R^2\). 
+Harga \(1/C = 0\) berhubungan dengan jari-jari kritis \(R_{\text{c}}\). Massa kritis reaktor (\(M_{\text{c}}\)) selanjutnya dapat ditentukan dari dimensi kritis ini:
+\begin{align}\label{eq:9}
+    M_{\text{c}} = \pi R_{\text{c}}^2 H_{\text{a}} \rho
+\end{align} 
+Di mana \(\rho\) adalah densitas bahan bakar (\(\text{g}/\text{cm}^3\)) dan \(H_{\text{a}}\) adalah tinggi aktif teras reaktor.
+Secara keseluruhan, penentuan massa kritis dilakukan dengan mengamati pertambahan populasi neutron (cacah) terhadap jumlah gram penambahan bahan bakar ke dalam teras hingga regenerasi neutron mencapai seimbang, 
+di mana harga \(K_{\text{eff}} = 1\). Untuk tujuan ini, sumber neutron (misalnya Am-Be) dimasukkan ke dalam teras sebagai sumber awal\cite{Lamarsh2002}.
